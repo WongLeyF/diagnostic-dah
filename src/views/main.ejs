@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('partials/head') %>
+    
+    <title>document.body.getElementById('fact')</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row vh-100">
+            <div class="col d-flex align-items-center justify-content-center">
+                <div class="card border-primary" style="width: 25rem;">
+                    <div class="card-body">
+                        <h4 class="card-title">Bienvenido <%= user.username%></h4>
+                        <div class="row">
+                            <div class="col">
+
+                                <div class="form-floating">
+                                    <input type="number" min="0" class="form-control" id="floatingInput"
+                                        placeholder="Username">
+                                    <label for="floatingInput">Factorial de N</label>
+                                </div>
+                                <button class="btn btn-lg btn-primary" id="generateTable">Calcular</button>
+
+                            </div>
+                            <div class="col">
+                                <table id="fact"></table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
