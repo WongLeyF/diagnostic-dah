@@ -11,6 +11,9 @@ class MainController {
         this.container = container
         button.addEventListener("click", (event) => {
             const value = document.getElementById('floatingInput').value
+            if (value < 1) {
+                return;
+            }
             table.innerHTML = ''
             thead.innerHTML = ''
             trTitle.innerHTML = ''
