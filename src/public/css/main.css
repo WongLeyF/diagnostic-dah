@@ -8,3 +8,22 @@
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: linear-gradient(to right, rgb(56, 56, 56), rgb(160, 160, 160))
 }
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+    border: 1px solid black;
+}
+
+th {
+    background-color: #000000;
+    color: white;
+}
+td{
+    border: 1px solid black;
+}
+
+.card{
+    border-radius: 1rem;
+}
+
