@@ -4,8 +4,11 @@
  * @param {import("passport").PassportStatic} passport 
  */
 module.exports = async (app, passport) => {
+    
     app.get('/', (req, res) => {
-        res.render('index')
+        res.render('index', {
+            message: 'noMSG'
+        })
     })
     
     app.get('/login', (req, res) => {
@@ -16,15 +19,19 @@ module.exports = async (app, passport) => {
 
     app.post('/login', passport.authenticate('local-login', {
         successRedirect: '/main',
-        failureRedirect: '/',
+        failureRedirect: '/login',
         failureFlash: true
     }))
 
     app.get('/main', isLoggedIn, (req, res)=> {
-        // console.log(req.user)
         res.render('main',{
             user: req.user
         })
+    })
+
+    app.get('/logout', (req, res) =>{
+        req.logout()
+        res.redirect('/')
     })
 
     function isLoggedIn (req, res, next) {
