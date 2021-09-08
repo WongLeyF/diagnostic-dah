@@ -13,9 +13,7 @@ require('dotenv').config();
 
 mongoose.connect(process.env.mongoURL, {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
-    keepAlive: true,
-    keepAliveInitialDelay: 300000
+    useUnifiedTopology: true
 })
 
 require('./config/passport')(passport)
